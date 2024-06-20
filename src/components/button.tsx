@@ -13,7 +13,7 @@ const CustomButtom = ({ text }: CustomButtomProps) => {
 
   return (
     <button
-      className="bg-button-primary w-full max-w-[340px] h-[40px] grid place-items-center mx-auto cursor-pointer active:opacity-80"
+      className="bg-button-primary w-full max-w-[340px] h-[40px] grid place-items-center mx-auto cursor-pointer active:opacity-80 text-primary"
       style={{
         borderRadius: "4px",
       }}
