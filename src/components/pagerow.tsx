@@ -1,12 +1,16 @@
 import React from "react";
 import CustomCheckbox from "./checkbox";
+import { PageKey } from "@/app/page";
 
 interface PageRowProps {
-    text: string
+    text: string,
+    callback: (pagetype: PageKey) => void,
+    type: PageKey,
+    checked: boolean
 }
 
 const PageRow = (
-    { text }: PageRowProps
+    { text, callback, type, checked }: PageRowProps
 ) => {
   return (
     <div
@@ -16,7 +20,7 @@ const PageRow = (
       }}
     >
         <span className="text-primary">{text}</span>
-        <CustomCheckbox checked={true} callback={() => console.log("Hello")} />
+        <CustomCheckbox checked={checked} callback={callback} type={type} />
     </div>
   );
 };
