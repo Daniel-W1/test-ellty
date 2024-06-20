@@ -4,10 +4,12 @@ import React from "react";
 
 interface CustomButtomProps {
   text: string;
+  callback: () => void;
 }
 
-const CustomButtom = ({ text }: CustomButtomProps) => {
+const CustomButtom = ({ text, callback }: CustomButtomProps) => {
   const handleDone = () => {
+    callback();
     alert("Way to go!");
   };
 

@@ -32,11 +32,20 @@ export default function Home() {
     }
   };
 
+  const clearAll = () => {
+    setChecked({
+      page1: false,
+      page2: false,
+      page3: false,
+      page4: false,
+    });
+  }
+
   return (
     <main className="w-full h-screen bg-gray-100 flex justify-center items-center">
       <div
         style={{
-          borderRadius: "1px",
+          borderRadius: "5px",
           padding: "10px 0",
           boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
         }}
@@ -74,7 +83,7 @@ export default function Home() {
           checked={checked["page4"]}
         />
         <Separator />
-        <CustomButtom text="Done" />
+        <CustomButtom text="Done" callback={clearAll} />
       </div>
     </main>
   );
